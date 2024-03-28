@@ -1,0 +1,9 @@
+name: testing first pipeline
+on: push
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hihi
+        run: echo "hi"       
