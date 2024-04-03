@@ -1,0 +1,14 @@
+name: testing first pipeline
+on: push
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: hihi
+        run: |
+          ls
+          echo "hello world"
+          cat README.md
