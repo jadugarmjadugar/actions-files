@@ -1,0 +1,30 @@
+/* Steps to runner
+
+1. Go to setting of your github
+2. Go to actions ---> runners
+3. Go to self hosted runners and execute all steps as stated
+4. In the workflow file add the runs-on labels with care
+*/
+
+
+
+name: testing first pipeline
+on: push
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: hihi
+        run: |
+          ls
+          echo "hello world"
+
+  second:
+    needs: first-job
+    runs-on: [self-hosted, Linux, karan-runner]
+    steps:
+      - name: karan
+        run: echo bye
