@@ -1,9 +1,16 @@
-name: testing first pipeline
-on: push
+name: My Workflow
+on: [push]
 
 jobs:
-  first-job:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: hihi
-        run: echo "hi"       
+    - name: Build stage
+      run: echo "this is build stage"
+
+    - name: Test stage
+      run: echo "this is test stage"
+
+    - name: Deploy stage
+      run: echo "this is deploy stage"
